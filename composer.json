@@ -1,0 +1,22 @@
+{
+    "name": "phillipsharring/handlr-module-landing",
+    "description": "Landing page module for handlr apps -- email capture and coming-soon page",
+    "version": "0.1.0",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Phillip Harrington",
+            "email": "phillip@phillipharrington.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.4",
+        "phillipsharring/handlr-framework": "^0.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Handlr\\Module\\Landing\\": "app/"
+        }
+    }
+}

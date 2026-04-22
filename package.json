@@ -10,10 +10,7 @@
   "files": [
     "src",
     "pages",
-    "components",
-    "README.md",
-    "CHANGELOG.md",
-    "LICENSE"
+    "components"
   ],
   "keywords": [
     "graspr",
