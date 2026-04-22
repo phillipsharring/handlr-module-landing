@@ -1,0 +1,30 @@
+{
+  "name": "@phillipsharring/handlr-module-landing",
+  "version": "0.1.0",
+  "description": "Landing page module for handlr/graspr apps -- email capture and coming-soon page",
+  "type": "module",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "files": [
+    "src",
+    "pages",
+    "components",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "graspr",
+    "handlr",
+    "module",
+    "landing-page",
+    "email-capture"
+  ],
+  "author": "Phillip Harrington <phillip@phillipharrington.com> (https://phillipharrington.com/)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=18"
+  }
+}
