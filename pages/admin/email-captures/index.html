@@ -1,0 +1,32 @@
+<layout name="admin" title="Email Captures" />
+
+<div class="space-y-6">
+    <div class="flex items-center gap-3">
+        <h1 class="text-2xl font-bold">Email Captures</h1>
+    </div>
+    <div class="overflow-auto border rounded">
+        <table class="min-w-full text-sm table-fixed">
+            <thead class="bg-slate-300 text-slate-800 font-bold border-b">
+                <tr class="text-left">
+                    <th class="px-4 py-3 font-medium w-[45%]">Email</th>
+                    <th class="px-4 py-3 font-medium w-[20%]">Source</th>
+                    <th class="px-4 py-3 font-medium w-[35%]">Date</th>
+                </tr>
+            </thead>
+            <component file="admin-list-tbody.html"
+                id="captures-tbody" url="/api/admin/email-captures" trigger="load"
+                template="captures-rows-template" colspan="3" class="divide-y"
+            >(Loading...)</component>
+        </table>
+    </div>
+
+    <template id="captures-rows-template">
+        {{#each data}}
+        <tr class="even:bg-slate-100 hover:bg-yellow-50">
+            <td class="px-4 py-3 text-slate-800">{{email}}</td>
+            <td class="px-4 py-3 text-slate-500">{{source}}</td>
+            <td class="px-4 py-3 text-slate-400 font-mono text-xs">{{formatDateTime created_at}}</td>
+        </tr>
+        {{/each}}
+    </template>
+</div>
