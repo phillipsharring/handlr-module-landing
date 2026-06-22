@@ -22,4 +22,4 @@ Initial release.
 - Module object export with self-resolving `pagesDir` and `componentsDir`
 - `/landing/` page with email capture form
 - Default `adminNav` config for admin integration
-- Compatible with `@phillipsharring/graspr-build` >= 0.3.0 module system
+- Compatible with `@phillipsharring/handlr-build` >= 0.3.0 module system

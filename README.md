@@ -1,8 +1,8 @@
 # handlr-module-landing
 
-![Graspr](graspr.png)
+![Handlr](handlr.png)
 
-Landing page module for [handlr](https://github.com/phillipsharring/handlr-framework)/[graspr](https://github.com/phillipsharring/graspr-framework) apps. Provides a "coming soon" email capture page and admin list.
+Landing page module for [handlr](https://github.com/phillipsharring/handlr-backend)/[handlr](https://github.com/phillipsharring/handlr-frontend) apps. Provides a "coming soon" email capture page and admin list.
 
 ## Install
 
@@ -53,14 +53,14 @@ composer run migrate
 ### Frontend
 
 - `/landing/` page with email capture form
-- Module object with self-resolving `pagesDir` and `componentsDir` for graspr-build
+- Module object with self-resolving `pagesDir` and `componentsDir` for handlr-build
 
 ## Configuration
 
-Override defaults with `configure()` from `@phillipsharring/graspr-build`:
+Override defaults with `configure()` from `@phillipsharring/handlr-build`:
 
 ```js
-import { configure } from '@phillipsharring/graspr-build/modules';
+import { configure } from '@phillipsharring/handlr-build/modules';
 import { landing } from '../backend/vendor/phillipsharring/handlr-module-landing/src/index.js';
 
 export default {
@@ -79,5 +79,5 @@ export default {
 
 ## Requires
 
-- `phillipsharring/handlr-framework` >= 0.5
-- `@phillipsharring/graspr-build` >= 0.3.0 (for module support in the build system)
+- `phillipsharring/handlr-backend` >= 0.5
+- `@phillipsharring/handlr-build` >= 0.3.0 (for module support in the build system)

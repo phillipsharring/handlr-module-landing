@@ -1,7 +1,7 @@
 /**
- * Landing module for handlr/graspr apps.
+ * Landing module for handlr/handlr apps.
  *
- * Build-time: provides pagesDir/componentsDir for graspr-build to discover pages.
+ * Build-time: provides pagesDir/componentsDir for handlr-build to discover pages.
  * Runtime: provides init() for email capture form handling.
  */
 
