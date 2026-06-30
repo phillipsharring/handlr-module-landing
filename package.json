@@ -1,6 +1,6 @@
 {
   "name": "@phillipsharring/handlr-module-landing",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Landing page module for handlr/handlr apps -- email capture and coming-soon page",
   "type": "module",
   "main": "src/index.js",
