@@ -18,6 +18,9 @@
     "landing-page",
     "email-capture"
   ],
+  "scripts": {
+    "test": "node ../check-browser-safety.mjs ."
+  },
   "author": "Phillip Harrington <phillip@phillipharrington.com> (https://phillipharrington.com/)",
   "license": "MIT",
   "engines": {
