@@ -4,6 +4,8 @@
 
 Landing page module for [handlr](https://github.com/phillipsharring/handlr-backend)/[handlr](https://github.com/phillipsharring/handlr-frontend) apps. Provides a "coming soon" email capture page and admin list.
 
+📖 **Documentation:** https://phillipsharring.github.io/handlr-mono/modules/landing
+
 ## Install
 
 ```bash
