@@ -1,5 +1,25 @@
 # Changelog
 
+## 0.4.0
+
+Adopt the handlr-frontend declarative behavior layer (ADR 0003).
+
+### Changed
+
+- The email-capture form now posts via HTMX (`hx-post` + `json-enc`) and resolves
+  its response declaratively: `data-on-success="reveal:#email-capture-msg"` (hide
+  form, show the success message) and `data-on-error="toast:…"`. The hand-rolled
+  `document.addEventListener('submit', …)` + `fetch` handler in `src/index.js` is
+  removed; `init()` is now a no-op kept for the module contract. The success text
+  is pre-baked into `#email-capture-msg` in the landing page markup.
+
+### Note
+
+- landing requires a backend (`POST /api/email-capture`) and therefore a handlr
+  **app** with the HTMX runtime + behavior layer — it is **not** usable on a pure
+  static site. (This was already true via the backend requirement; the frontend
+  now makes the app dependency explicit.)
+
 ## 0.2.1
 
 Browser-safe module + email capture frontend.

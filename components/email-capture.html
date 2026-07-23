@@ -1,4 +1,11 @@
-<form id="email-capture-form" class="flex gap-2">
+<form id="email-capture-form" class="flex gap-2"
+      hx-post="/api/email-capture"
+      hx-ext="json-enc"
+      hx-swap="none"
+      hx-disabled-elt="button[type='submit']"
+      data-on-success="reveal:#email-capture-msg"
+      data-on-error="toast:Something went wrong. Please try again.">
+    <input type="hidden" name="source" value="landing" />
     <input type="email" name="email" required placeholder="you@example.com"
            class="flex-1 px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500" />
     <button type="submit"
