@@ -22,42 +22,13 @@ export const landing = {
 
     config: {},
 
-    init() {
-        document.addEventListener('submit', function(e) {
-            var form = e.target.closest('#email-capture-form');
-            if (!form) return;
-
-            e.preventDefault();
-
-            var email = form.querySelector('input[name="email"]').value;
-            var btn = form.querySelector('button[type="submit"]');
-            var msg = document.getElementById('email-capture-msg');
-
-            btn.disabled = true;
-            btn.textContent = 'Sending...';
-
-            fetch('/api/email-capture', {
-                method: 'POST',
-                credentials: 'same-origin',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email: email, source: 'landing' }),
-            })
-            .then(function(r) { return r.json(); })
-            .then(function() {
-                form.classList.add('hidden');
-                if (msg) {
-                    msg.textContent = "You're on the list!";
-                    msg.className = 'mt-4 text-sm text-green-600 font-medium';
-                }
-            })
-            .catch(function() {
-                btn.disabled = false;
-                btn.textContent = 'Notify Me';
-                if (msg) {
-                    msg.textContent = 'Something went wrong. Please try again.';
-                    msg.className = 'mt-4 text-sm text-red-600';
-                }
-            });
-        });
-    },
+    // The email-capture form now posts via HTMX and resolves its response
+    // declaratively (hx-post + json-enc + data-on-success/-error, ADR 0003):
+    // on success the form hides and #email-capture-msg is revealed; on error a
+    // toast shows. The host app's ./init drives this — no runtime wiring needed.
+    // Kept for the module contract; safe to call, does nothing.
+    //
+    // NOTE: landing requires a backend (POST /api/email-capture) and therefore a
+    // handlr app with HTMX — it is not usable on a pure static site.
+    init() {},
 };
